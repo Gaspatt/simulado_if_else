@@ -8,13 +8,13 @@
 
     //ENTRADA
     const salario = Number(prompt('Informe seu salário mensal:').trim().replace(',', '.')).toFixed(2)
-    const cargo = prompt('Informe qual o seu cargo (estagiário ou programador!):')
+    const cargo = prompt('Informe qual o seu cargo (estagiario ou programador!):').toLowerCase()
     const horas = Number(prompt('Informe quantas horas você trabalha por dia:').trim().replace(',', '.')).toFixed(2)
     const sdia = salario / 20
     const shora = 
 
     //PROCESSAMENTO
-    if (horas <= 6) {
+    if (horas <= 6 && cargo == "estagiario") {
         alert(`Você recebe por hora R$${}`)
     }
 
