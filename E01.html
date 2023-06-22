@@ -6,11 +6,26 @@
     //Contudo, caso o aluno que ajudou (TUTOR) obteve maior nota, bonifique-o com um adicional de 10% da nota do aluno ajudado, e o programa apresentará a mensagem "CONTINUE ENSINANDO!" e também apresentará a nota final do aluno que ajudou (TUTOR).
 
     //ENTRADA
-
-
+    const ntutor = Number(prompt('Informe a nota que o tutor obteve no terceiro trimestre:').trim().replace(',', '.'));
+    const naluno = Number(prompt('Informe a nota que o aluno ajudado obteve no terceiro trimestre:').trim().replace(',', '.'))
+    let bonus = 0
+    let nfinal = 0
     //PROCESSAMENTO
-
-
+    if (naluno > ntutor) {
+        alert(`Cria maior que o criador!\n Nota do tutor: ${naluno.toFixed(1).replace(',','.')}`)
+    }
+    else if (ntutor > naluno) {
+        bonus = naluno / 100 * 10
+        nfinal = bonus + ntutor
+        if (nfinal > 10) {
+            nfinal = 10
+        }
+        alert(`Continue ensinando!\n Nota do tutor: ${nfinal.toFixed(1).replace(',','.')}`)
+    }
+    else if (ntutor > 10 || naluno > 10) {
+        alert('Informe uma nota menor que 10 né inteligente')
+    }
+    
     //SAÍDA
 
 </script>
